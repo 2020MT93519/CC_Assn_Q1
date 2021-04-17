@@ -1,0 +1,52 @@
+<html>
+ <head>
+  <link href='loginstyle.css' rel='stylesheet'>
+  <script type="text/javascript">
+   function validate(thisform)
+   {
+     var username=thisform.username.value;
+     var password=thisform.password.value;
+     if(username==null||username=="")
+     {
+       alert("Enter UserName");
+       thisform.mailid.focus();
+       return false;
+     }
+     else if(password==null||password=="")
+     {
+       alert("Enter Password");
+       thisform.password.focus();
+       return false;
+     }
+     else if(username=='2020MT93519' && password=='password')
+     {
+	alert("Login Successfully"); 
+     }
+     else
+     {
+	alert("Login failed due to incorrect Username and Password"); 
+     }
+   }
+  </script>
+ </head>
+ <body>
+  <div id="main">
+   <div id="container">
+    <img src="user2.png" class="user">
+    <h2>Login</h2>
+    <form method="post" name="login" onsubmit="return(validate(this));">
+     <p>UserName:</p>
+     <input type="text" name="username" placeholder="Enter username">
+     <p>Password:</p>
+     <input type="password" name="password" placeholder="Enter Password">
+     <input type="submit" name="" value="Sign In"></br>
+     <pre size:10px >Username:2020MT93519, Password:password</pre>
+     </br></br>
+     <a href="forgotpassword.html">Forgot Password?</a></br>
+     <pre>New user?<a href="register.html">Register Here</a>
+     </pre>
+   </form>
+   </div>
+  </div>
+ </body>
+</html>
